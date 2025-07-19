@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="./style.css">
+
+        <style>
+              * {
+      box-sizing: border-box;
+      margin: 0;
+      padding:0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* Animasyon tanımları */
+    @keyframes fadeIn {
+      from { opacity: 10; transform: translateY(20px); }
+      to { opacity: 100; transform: translateY(0); }
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 5; transform: translateX(0); }
+    }
+    
+    header {
+      background-color: #ffffff;
+      padding: 35px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      animation: fadeIn 1s ease-out;
+    }
+    .logo{
+      height:60px;
+      width:60px;
+      border-radius:7px;
+      
+      
+    }
+    
+    nav {
+      background-color:#001D39;
+      padding:20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out; /* burası anımasyon eklenilern bölüm*/
+    }
+    
+    nav a { 
+      color: #ffffff;
+      margin: 0px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    
+    /* Navigasyon linkleri için alt çizgi animasyonu */
+    nav a::after {
+      background-color:hsl(0, 10%, 94%);
+      content: "";
+      position: absolute;
+      left: 60%;
+      bottom: -2px; /*alt çizgi konumu*/
+      width: 0;
+      height: 2px;
+      background: #ffffff;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    nav a:hover::after {
+      width: 100%;   /* animasyon çizgi yeri navigasyon da*/
+      left: 0;
+    }
+    
+
+   
+    @keyframes slideText{
+      0%{
+        left:-100%;
+      }
+      100%{
+        left:12%;
+        transform:translate(-50%,50%);
+      }
+      
+    }
+   
+   .kutu-container{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:30px;
+   }
+   .kutu{
+    flex:10px;
+    height:200px;
+    background-color:#ffffff;
+    color:rgb(0, 0, 0);
+    font-size:10px;
+    font-family:Arial, Helvetica, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:1px;
+    box-shadow:0 4px 10px #7e520f;
+    transition:transform 0.3s ease;
+   }
+   .kutu:hover{
+    transform:scale(1.05);
+   }
+   .kutu img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+   }
+   .kutu p{
+    margin:10px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+   footer {
+  background-color:#001D39;
+  color: white;
+  padding: 40px 20px 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+.footer-section p {
+  margin: 0 0 10px 0;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section a:hover {
+  color: #c6c4b9;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.sosyal a {
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+      <body>
+    <div id="navbar"></div>
+
+
+         <nav>
+            <a href="index.html">Anasayfa</a>
+          <a href="projelerimiz.html">Projeler</a>
+            <a href="hakkımda.html">Hakkımızda</a>
+            <a href="iletisim.html">İletişim</a>
+          
+            
+            
+         <div style="text-align:left;">
+       <img src="Black and White Square Personal Logo.png" class="logo">
+       <a class="facebook" href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook"></i></a>
+       <a class="x" href="https://x.com/X." target="blank"><i class="fa fa-twitter"></i></a>
+       <a class="instegram" href="https://www.instagram.com/" target="blank"><i class="fa fa-instagram"></i></a>
+       <a class="pinterest" href="https://tr.pinterest.com/" target="blank"><i class="fa fa-pinterest"></i></a>
+       <a class="whatsapp" href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i></a>
+       
+         </div>
+        </nav>
+
+<div class="kutu-container">
+  <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.intacteco.ro/image/cache/catalog/Italia%20star/schelaclasicamodularacondormodelomegaper_11002_9_1606214763-500x500.jpeg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.baskentiskele.com.tr/assets/images/product/product/insaat-malzemesi-onemi.jpg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.bursahakimiyet.com.tr/static/2024/06/07/insaat-malzemesi-sanayi-uretimi-artti-1717751443-471_small.jpg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+  
+ 
+</div>
+<div class="kutu-container">
+  <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="C:\Users\akgul\Desktop\insaat\ev.jpg" alt="isim">
+    </a>
+    <p>kutu1 bjcsjccbdılcjdjcxxc n n ıcsclı9uejnfuyd9u</p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://i.pinimg.com/736x/13/17/fc/1317fc3974a840e0af755ecc0b420c8e.jpg">
+    </a>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.globalsan.com.tr/wp-content/uploads/2023/08/insaat-malzemesi-satis1.jpg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div></div>
+  
+<div class="kutu-container">
+  <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.intacteco.ro/image/cache/catalog/Italia%20star/schelaclasicamodularacondormodelomegaper_11002_9_1606214763-500x500.jpeg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.baskentiskele.com.tr/assets/images/product/product/insaat-malzemesi-onemi.jpg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
+ <div class="kutu">
+    <a href="projelerimiz.html" target="_blank">
+      <img src="https://www.bursahakimiyet.com.tr/static/2024/06/07/insaat-malzemesi-sanayi-uretimi-artti-1717751443-471_small.jpg" alt="isim">
+    </a>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+  </div>
+ 
+</div>
+
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    
+    <div class="footer-section">
+      <h3>Hakkımızda</h3>
+      <p>Tuğçe Web Tasarım, modern ve kullanıcı dostu web çözümleri sunar. Kalite, güven ve yaratıcılığı ön planda tutar.</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>İletişim</h3>
+      <p>E-posta: tugce@example.com</p>
+      <p>Telefon: +90 555 123 45 67</p>
+    </div>
+
+    <div class="footer-section">
+      <h3>Hızlı Linkler</h3>
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+        <li><a href="hakkımda.html">Sık Sorulan Sorular</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Bizi Takip Et</h3>
+      <div class="sosyal">
+        <a href="#" target="_blank">Instagram</a> |
+        <a href="https://www.youtube.com/" target="_blank">YouTube</a> |
+        <a href="#" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+  </div>
+
+
+</footer>
+
+    
+    
+    
+
+</nav>
+
+    </body>
+</html> 

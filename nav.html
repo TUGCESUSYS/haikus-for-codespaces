@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link rel="stylesheet" href="./style.css">
+
+        <style>
+     
+    
+    /* Animasyon tanımları */
+    @keyframes fadeIn {
+      from { opacity: 10; transform: translateY(20px); }
+      to { opacity: 100; transform: translateY(0); }
+    }
+    
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-20px); }
+      to { opacity: 5; transform: translateX(0); }
+    }
+    
+    header {
+      background-color: #ffffff;
+      padding: 35px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      animation: fadeIn 1s ease-out;
+    }
+    .logo{
+      height:60px;
+      width:60px;
+      border-radius:7px;
+      
+      
+    }
+    
+    nav {
+      background-color:#FF9900;
+      padding:20px;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out; /* burası anımasyon eklenilern bölüm*/
+    }
+    
+    nav a { 
+      color: #ffffff;
+      margin: 0px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      position: relative;
+    }
+    
+    /* Navigasyon linkleri için alt çizgi animasyonu */
+    nav a::after {
+      background-color:hsl(0, 10%, 94%);
+      content: "";
+      position: absolute;
+      left: 60%;
+      bottom: -2px; /*alt çizgi konumu*/
+      width: 0;
+      height: 2px;
+      background: #ffffff;
+      transition: width 0.3s ease, left 0.3s ease;
+    }
+    
+    nav a:hover::after {
+      width: 100%;   /* animasyon çizgi yeri navigasyon da*/
+      left: 0;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="navbar"></div>
+
+
+         <nav>
+            <a href="index.html">Anasayfa</a>
+            <a href="hakkımda.html">Hakkımızda</a>
+            <a href="projelerimiz.html">Projeler</a>
+            <a href="iletisim.html">İletişim</a>
+          
+            
+            
+         <div style="text-align:left;">
+       <img src="Black and White Square Personal Logo.png" class="logo">
+       <a class="facebook" href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook"></i></a>
+       <a class="x" href="https://x.com/X." target="blank"><i class="fa fa-twitter"></i></a>
+       <a class="instegram" href="https://www.instagram.com/" target="blank"><i class="fa fa-instagram"></i></a>
+       <a class="pinterest" href="https://tr.pinterest.com/" target="blank"><i class="fa fa-pinterest"></i></a>
+       <a class="whatsapp" href="https://web.whatsapp.com/" target="blank"><i class="fa fa-whatsapp"></i></a>
+       
+         </div>
+        </nav>
+</body>
+</html>
